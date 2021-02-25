@@ -1,0 +1,83 @@
+"""
+This program will run a drills run.
+"""
+
+# This set of commands stores character stats to be used later in the run.
+print("Character Stats:")
+print(" ")
+print("Please enter the following: ")
+print(" ")
+pc_name = input("Name: ")
+print(" ")
+pc_hp = int(input("HP: "))
+pc_str = int(input("Strength: "))
+pc_mag = int(input("Magic: "))
+pc_skl = int(input("Skill: "))
+pc_spd = int(input("Speed: "))
+pc_def = int(input("Defense: "))
+pc_res = int(input("Resistance: "))
+pc_luck = int(input("Luck: "))
+print(" ")
+pc_avoid = int(((pc_spd * 2) + (pc_luck / 2)))
+print("Avoid: " + str(pc_avoid))
+
+print(" ")
+
+# This stores character initial crit
+pc_init_crit = (pc_skl * 2) + (pc_luck / 4)
+
+# This is where we record the skills the character has.
+pc_nihil = input("Does " + pc_name + " have Nihil?")
+
+# I'm getting an error saying my first condition is an invalid syntax
+if pc_nihil = "yes":
+  pc_nihil = true
+elif pc_nihil = "Yes":
+  pc_nihil = true
+elif pc_nihil = "y":
+  pc_nihil = true
+elif pc_nihil = "Y":
+  pc_nihil = true
+else:
+  pc_nihil = false
+
+print(pc_nihil)
+
+# This set of commands stores opponent stats to be used later in the run.
+print("Opponent Stats:")
+print(" ")
+print("Please enter the following: ")
+print(" ")
+op_name = input("Name: ")
+print(" ")
+op_hp = int(input("HP: "))
+op_str = int(input("Strength: "))
+op_mag = int(input("Magic: "))
+op_skl = int(input("Skill: "))
+op_spd = int(input("Speed: "))
+op_def = int(input("Defense: "))
+op_res = int(input("Resistance: "))
+op_luck = int(input("Luck: "))
+op_avoid = (op_spd * 2) + (op_luck / 2)
+op_avoid = int(op_avoid)
+print(" ")
+print("Avoid: " + str(op_avoid))
+
+print(" ")
+
+#This is where the op_init_crit will be stored, and op_true_crit will be calculated
+
+""""
+This is where I would like to ask the user to respond a yes/no question to determine what skills the character has.
+My intention is to have a command such as:
+if input("Does " + op_name + " have Nihil?") = yes:
+  op_true_crit = 0
+which would replace the already calculated op_true_crit
+"""
+
+# This block of commands prints what is usually displayed at the beginning of the drills run, displaying who is battling and who goes first.
+print(op_name + " vs " + pc_name)
+if pc_spd >= op_spd:
+    print(pc_name + " goes first!")
+else:
+    print(op_name + " goes first!")
